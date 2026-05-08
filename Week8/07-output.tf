@@ -18,3 +18,9 @@ output "vm_internal_ip" {
   value       = google_compute_instance.vm.network_interface[0].network_ip
 }
 output "vm_id" { value = google_compute_instance.vm.id }
+
+# Add vm_self_link output to output.tf
+output "vm_self_link" {
+  value       = google_compute_instance.vm.self_link
+  description = "VM instance self link"
+}
